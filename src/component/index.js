@@ -1,0 +1,13 @@
+export {default as About} from './About/About';
+export {default as ContactUs} from './ContactUs/ContactUs';
+export {default as CTA} from './CTA/CTA';
+export {default as Header} from './Header/Header';
+export {default as Navbar} from './Navbar/Navbar';
+export {default as OurWork} from './OurWork/OurWork';
+export {default as Portfolio} from './Portfolio/Portfolio';
+export {default as Projects} from './Projects/Projects';
+export {default as Services} from './Services/Services';
+export {default as Sponsor} from './Sponsor/Sponsor';
+export {default as Team} from './Team/Team';
+export {default as Testimonial} from './Testimonial/Testimonial';
+export {default as Footer} from './Footer/Footer';
