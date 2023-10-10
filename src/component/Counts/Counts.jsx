@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Sponsor = () => {
+const Counts = () => {
   return (
     <div>
-      Sponsor
+      Counts
     </div>
   )
 }
 
-export default Sponsor
+export default Counts

@@ -1,19 +1,28 @@
 import React from 'react';
-import {About, ContactUs, CTA, Footer, Header, Navbar, OurWork, Portfolio, 
-  Projects, Services, Sponsor, Team, Testimonial} from '../../component/index'
+import {About, ContactUs, CTA, Footer, Hero, Navbar, Features, Portfolio, 
+       Counts, Services, Client, Team, Testimonial} from '../../component/index';
+import {hero} from '../../assets/index'
 
 const Home = () => {
+
+ 
+
   return (
     <div>
-      <Navbar />
-      <Header />
+      <div style={{ backgroundImage: `url(${hero})`, backgroundRepeat:'no-repeat', backgroundPosition:'center',
+       backgroundSize:'cover', width:'100%', height:'100vh', backgroundAttachment:'fixed'}} className='text-white'>
+        <div className='bg-black/60 w-full h-[100vh]'>
+          <Navbar />
+          <Hero />
+        </div>
+      </div>    
       <About />
-      <Sponsor />
-      <OurWork />
+      <Client />
+      <Features />
       <Services />
       <CTA />
       <Portfolio />
-      <Projects />
+      <Counts />
       <Testimonial />
       <Team />
        <ContactUs />

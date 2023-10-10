@@ -1,11 +1,11 @@
 import React from 'react'
 
-const OurWork = () => {
+const Client = () => {
   return (
     <div>
-      outwork
+      Client
     </div>
   )
 }
 
-export default OurWork
+export default Client
