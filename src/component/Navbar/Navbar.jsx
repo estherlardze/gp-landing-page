@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
+
 const Navbar = () => {
  const [bgColor, setBgColor] = useState(false);
  const [showMenu, setShowMenu] = useState(false);
@@ -16,7 +17,6 @@ const Navbar = () => {
  window.addEventListener('scroll', changeColor);
 
   return (
-  
    <nav className={`w-full py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`}>
     <div className='flex justify-between items-center'>
       <div>
@@ -39,7 +39,6 @@ const Navbar = () => {
       <div className='block lg:hidden' onClick={()=> setShowMenu(!showMenu)}>
           {showMenu ? <AiOutlineClose size={28}/> : <AiOutlineMenu size={28} />}
         </div>
-     
       </div>
      
       {

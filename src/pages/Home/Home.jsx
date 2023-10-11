@@ -10,8 +10,8 @@ const Home = () => {
   return (
     <div>
       <div style={{ backgroundImage: `url(${hero})`, backgroundRepeat:'no-repeat', backgroundPosition:'center',
-       backgroundSize:'cover', width:'100%', height:'100vh', backgroundAttachment:'fixed'}} className='text-white'>
-        <div className='bg-black/60 w-full h-[100vh]'>
+       backgroundSize:'cover', backgroundAttachment:'fixed'}} className='text-white h-fit w-full lg:h-[100vh]'>
+        <div className='bg-black/60 w-full h-fit lg:h-[100vh] pb-12'>
           <Navbar />
           <Hero />
         </div>
