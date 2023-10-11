@@ -8,7 +8,7 @@ export {default as client6} from './images/client-6.png';
 export {default as client7} from './images/client-7.png';
 export {default as client8} from './images/client-8.png';
 export {default as counts} from './images/counts-img.jpg';
-export {default as cta} from './images/about.jpg';
+export {default as cta} from './images/cta-bg.jpg';
 export {default as demo} from './images/demo-bg.jpg';
 export {default as download} from './images/download.svg';
 export {default as features} from './images/features.jpg';

@@ -20,21 +20,21 @@ const Navbar = () => {
    <nav className={`w-full py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`}>
     <div className='flex justify-between items-center'>
       <div>
-         <h1 className='font-bold text-4xl'>GP <span className='text-yellow-500'>.</span></h1>
+         <h1 className='font-bold text-4xl'>GP <span className='text-yellow'>.</span></h1>
       </div>
       <div>
         <ul className='gap-8 hidden lg:flex'>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Home</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>About</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Services</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Portfolio</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Team</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Drop Down</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Contact</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Home</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>About</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Services</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Portfolio</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Team</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Drop Down</li>
+          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Contact</li>
         </ul>
       </div>
       <div>
-        <button className='border-2 border-yellow-500 py-[6px] px-7 rounded-sm hover:bg-yellow-500 hover:text-black transition-all ease-in-out duration-500'>Get Started</button>
+        <button className='border-2 border-yellow py-[6px] px-7 rounded-sm hover:bg-yellow hover:text-black transition-all ease-in-out duration-500'>Get Started</button>
       </div>
       <div className='block lg:hidden' onClick={()=> setShowMenu(!showMenu)}>
           {showMenu ? <AiOutlineClose size={28}/> : <AiOutlineMenu size={28} />}

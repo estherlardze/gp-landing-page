@@ -6,22 +6,22 @@ const About = () => {
   return (
     <div className='mx-4 sm:mx-8 xl:mx-24 my-16 flex flex-col-reverse lg:flex-row gap-4 text-black/70'>
       <div className='flex-1'>
-        <h1 className='font-bold text-3xl lg:text-[34px]'>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h1>
+        <h1 className='font-bold text-2xl sm:text-3xl lg:text-[34px]'>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h1>
         <p className='my-4'><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
           tempor incididunt ut labore et dolore magna aliqua.</em></p>
         <div>
           <div className='flex gap-2'>
-            <TbChecks className='text-yellow-500' size={20}/> 
+            <TbChecks className='text-yellow' size={20}/> 
             <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
           </div>
 
           <div className='flex gap-2 my-2'>
-            <TbChecks className='text-yellow-500' size={20}/>           
+            <TbChecks className='text-yellow' size={20}/>           
             <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span>
            </div>
 
           <div className='flex gap-2'>
-            <TbChecks className='text-yellow-500' size={45}/>
+            <TbChecks className='text-yellow' size={45}/>
             <span>
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
               aute irure dolor in reprehenderit in voluptate trideta storacalaperda
