@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceCard from '../ServiceCard';
+import ServiceCard from './ServiceCard';
 import {BsFillFileEarmarkImageFill} from 'react-icons/bs'
 import {AiOutlineDesktop} from 'react-icons/ai'
 import {IoBasketballOutline} from 'react-icons/io5'

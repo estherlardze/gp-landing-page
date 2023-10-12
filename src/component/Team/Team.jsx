@@ -1,5 +1,5 @@
 import React from 'react'
-import TeamCard from '../TeamCard'
+import TeamCard from './TeamCard'
 import {team1, team2, team3, team4} from '../../assets/index'
 
 const Team = () => {

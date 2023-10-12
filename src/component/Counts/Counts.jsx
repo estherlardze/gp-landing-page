@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {counts} from '../../assets/index';
 import {HiOutlineEmojiHappy} from 'react-icons/hi';
 import {AiOutlineProject} from 'react-icons/ai';
@@ -7,8 +7,10 @@ import {BsAward} from 'react-icons/bs';
 import  CountUp  from 'react-countup';
 
 const Counts = () => {
+
   return (
-    <div className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 mt-16'>
+
+    <section className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 mt-16'>
       <div >
         <img src={counts} alt="count image"/>
       </div>
@@ -55,7 +57,7 @@ const Counts = () => {
         </div>
       </div>
 
-    </div>
+    </section>
   )
 }
 

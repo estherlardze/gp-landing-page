@@ -1,5 +1,5 @@
 export {default as About} from './About/About';
-export {default as ContactUs} from './ContactUs/ContactUs';
+export {default as Contact} from './Contact/Contact';
 export {default as CTA} from './CTA/CTA';
 export {default as Hero} from './Hero/Hero';
 export {default as Navbar} from './Navbar/Navbar';

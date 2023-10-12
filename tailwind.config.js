@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +9,13 @@ export default {
       colors: {
         yellow: '#fabf48',
         },
-
+      fontFamily:{
+        Poppins: ['Poppins', 'sans-serif'],
+      },
+      backgroundImage: {
+        "hero":  "url('/src/assets/images/hero-bg.jpg')",
+        "calltoaction":  "url('/src/assets/images/cta-bg.jpg')",
+      }
     },
   },
   plugins: [],
