@@ -8,7 +8,7 @@ import {RiPaintBrushLine, RiCalendarTodoLine, RiBarChartBoxLine,
 
 const Hero = () => {
   return (
-    <div className='pt-[150px] flex flex-col justify-center items-center'>
+    <section className='pt-[150px] flex flex-col justify-center items-center' id='home'>
       <div className='lg:max-w-[50%] text-center'>
         <h1 className='text-4xl md:text-6xl font-bold font-sans leading-14 lg:mb-4'>Powerful Digital Solutions With
          <span className='text-yellow'>.</span>
@@ -23,7 +23,7 @@ const Hero = () => {
         <HeroCard icon={<HiOutlineDatabase size={40}/>} title="Nemos Enimade"/>
 
       </div>
-    </div>
+    </section>
   )
 }
 

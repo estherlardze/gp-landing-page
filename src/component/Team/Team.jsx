@@ -4,7 +4,7 @@ import {team1, team2, team3, team4} from '../../assets/index'
 
 const Team = () => {
   return (
-    <div className='mx-4 sm:mx-8 xl:mx-24 mt-12'>
+    <section className='mx-4 sm:mx-8 xl:mx-24 mt-12' id='team'>
       <div className="flex items-end justify-start gap-3 mb-2">
         <h3 className="text-black/50 font-semibold">TEAM</h3>
         <span className="w-[120px] h-[1px] mb-3 bg-yellow"></span>
@@ -17,7 +17,7 @@ const Team = () => {
         <TeamCard image={team3} name="William Anderson" position="CTO"/>
         <TeamCard image={team4} name="Amanda Jepson" position="Accountant"/>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -4,7 +4,7 @@ import { about } from '../../assets/index'
 
 const About = () => {
   return (
-    <div className='mx-4 sm:mx-8 xl:mx-24 my-16 flex flex-col-reverse lg:flex-row gap-4 text-black/70'>
+    <div className='mx-4 sm:mx-8 xl:mx-24 my-16 flex flex-col-reverse lg:flex-row gap-4 text-black/70' id='about'>
       <div className='flex-1'>
         <h1 className='font-bold text-2xl sm:text-3xl lg:text-[34px]'>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h1>
         <p className='my-4'><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 

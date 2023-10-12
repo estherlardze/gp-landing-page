@@ -25,8 +25,10 @@ const Form = () => {
       />
     </div>
 
-    <div className='flex flex-col items-center justify-center'>
-      <button type="submit" className='bg-yellow py-2 px-4 hover:bg-yellow/80 transition-all ease-in-out duration-300'>Send Message</button>
+    <div className='flex flex-col items-center justify-center mt-4'>
+      <button type="submit" className='bg-yellow py-2 px-4 hover:bg-yellow/80 transition-all ease-in-out duration-300'>
+        Send Message
+      </button>
     </div>
       </form>
   );

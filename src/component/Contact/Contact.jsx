@@ -27,7 +27,7 @@ const address = [
 const Contact = () => {
 
   return (
-    <div className='mx-4 sm:mx-8 xl:mx-24 mt-12'>
+    <div className='mx-4 sm:mx-8 xl:mx-24 mt-12' id="contact">
       <div className="flex items-end justify-start gap-3 mb-2">
         <h3 className="text-black/50 font-semibold">CONTACT</h3>
         <span className="w-[120px] h-[1px] mb-3 bg-yellow"></span>
@@ -45,7 +45,7 @@ const Contact = () => {
   <div className='grid grid-cols-12 gap-6 mt-8'>
      <div className='col-span-12 lg:col-span-4'>
        {address.map((add, index) => (
-         <article key={index} className='flex gap-4 mb-2 '>
+         <article key={index} className='flex gap-4 mb-4'>
            <p className='bg-yellow p-2 my-2 rounded-sm text-center'>{add.icon}</p>
            <div>
               <h3 className="text-black/90 font-semibold text-[1.6rem]">{add.title}</h3>

@@ -1,10 +1,19 @@
 import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import Dropdown from './Dropdown';
 
+
+const listStlye = 'font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500'
+const listStlyeSmallScreen = 'font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'
 
 const Navbar = () => {
  const [bgColor, setBgColor] = useState(false);
  const [showMenu, setShowMenu] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
 
  const changeColor = () => {
    if(window.scrollY >= 90){
@@ -17,20 +26,20 @@ const Navbar = () => {
  window.addEventListener('scroll', changeColor);
 
   return (
-   <nav className={`w-full py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`}>
+   <nav className={`w-full h-[70px] py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`} id="top">
     <div className='flex justify-between items-center'>
       <div>
          <h1 className='font-bold text-4xl'>GP <span className='text-yellow'>.</span></h1>
       </div>
       <div>
         <ul className='gap-8 hidden lg:flex'>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Home</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>About</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Services</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Portfolio</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Team</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Drop Down</li>
-          <li className='font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500 focus:text-blue-500'>Contact</li>
+          <li className={listStlye} onClick={() => scrollToSection('home')}>Home</li>
+          <li className={listStlye} onClick={() => scrollToSection('about')}>About</li>
+          <li className={listStlye} onClick={() => scrollToSection('services')}>Services</li>
+          <li className={listStlye} onClick={() => scrollToSection('portfolio')}>Portfolio</li>
+          <li className={listStlye} onClick={() => scrollToSection('team')}>Team</li>
+         <Dropdown/>
+          <li className={listStlye} onClick={() => scrollToSection('contact')}>Contact</li>
         </ul>
       </div>
       <div>
@@ -45,13 +54,13 @@ const Navbar = () => {
         showMenu && (
         <div className='mt-4 block lg:hidden bg-white w-[90vw] h-[86vh] z-20'>
         <ul className='gap-2 flex flex-col text-black  mt-4'>
-          <li className='font-semibold cursor-pointer  mt-4 py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Home</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>About</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Services</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Portfolio</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Team</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Drop Down</li>
-          <li className='font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'>Contact</li>
+          <li className={`${listStlyeSmallScreen} mt-4`} onClick={() => scrollToSection('home')}>Home</li>
+          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('about')}>About</li>
+          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('services')}>Services</li>
+          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('portfolio')}>Portfolio</li>
+          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('team')}>Team</li>
+          <li className={listStlyeSmallScreen}>Drop Down</li>
+          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('contact')}>Contact</li>
         </ul>
         </div>
         )

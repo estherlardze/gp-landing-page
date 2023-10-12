@@ -2,7 +2,7 @@ import React from 'react'
 
 const Portfolio = () => {
   return (
-    <div>
+    <div id='portfolio'>
       Portfolio
     </div>
   )
