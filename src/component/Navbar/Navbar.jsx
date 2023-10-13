@@ -3,8 +3,9 @@ import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 import Dropdown from './Dropdown';
 
 
-const listStlye = 'font-semibold cursor-pointer hover:text-yellow transition-all ease-in-out duration-500'
-const listStlyeSmallScreen = 'font-semibold cursor-pointer py-2 pl-6 hover:bg-yellow-500 transition-all ease-in-out duration-500 focus:text-blue-500'
+
+const listStlye = 'font-semibold hover:text-yellow transition-all ease-in-out duration-500  focus:text-yellow'
+const listStlyeSmallScreen = 'font-semibold py-2 pl-6 hover:bg-yellow transition-all ease-in-out duration-500 focus:bg-yellow'
 
 const Navbar = () => {
  const [bgColor, setBgColor] = useState(false);
@@ -32,15 +33,15 @@ const Navbar = () => {
          <h1 className='font-bold text-4xl'>GP <span className='text-yellow'>.</span></h1>
       </div>
       <div>
-        <ul className='gap-8 hidden lg:flex'>
-          <li className={listStlye} onClick={() => scrollToSection('home')}>Home</li>
-          <li className={listStlye} onClick={() => scrollToSection('about')}>About</li>
-          <li className={listStlye} onClick={() => scrollToSection('services')}>Services</li>
-          <li className={listStlye} onClick={() => scrollToSection('portfolio')}>Portfolio</li>
-          <li className={listStlye} onClick={() => scrollToSection('team')}>Team</li>
-         <Dropdown/>
-          <li className={listStlye} onClick={() => scrollToSection('contact')}>Contact</li>
-        </ul>
+        <div className='gap-8 hidden lg:flex'>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('home')}>Home</a>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('about')}>About</a>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('services')}>Services</a>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('portfolio')}>Portfolio</a>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('team')}>Team</a>
+          <div><Dropdown/></div>
+          <a href='#' className={listStlye} onClick={() => scrollToSection('contact')}>Contact</a>
+        </div>
       </div>
       <div>
         <button className='border-2 border-yellow py-[6px] px-7 rounded-sm hover:bg-yellow hover:text-black transition-all ease-in-out duration-500'>Get Started</button>
@@ -53,15 +54,15 @@ const Navbar = () => {
       {
         showMenu && (
         <div className='mt-4 block lg:hidden bg-white w-[90vw] h-[86vh] z-20'>
-        <ul className='gap-2 flex flex-col text-black  mt-4'>
-          <li className={`${listStlyeSmallScreen} mt-4`} onClick={() => scrollToSection('home')}>Home</li>
-          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('about')}>About</li>
-          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('services')}>Services</li>
-          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('portfolio')}>Portfolio</li>
-          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('team')}>Team</li>
-          <li className={listStlyeSmallScreen}>Drop Down</li>
-          <li className={listStlyeSmallScreen} onClick={() => scrollToSection('contact')}>Contact</li>
-        </ul>
+        <div className='gap-2 flex flex-col text-black  mt-4'>
+          <a href='#' className={`${listStlyeSmallScreen} mt-4`} onClick={() => scrollToSection('home')}>Home</a>
+          <a href='#' className={listStlyeSmallScreen} onClick={() => scrollToSection('about')}>About</a>
+          <a href='#' className={listStlyeSmallScreen} onClick={() => scrollToSection('services')}>Services</a>
+          <a href='#' className={listStlyeSmallScreen} onClick={() => scrollToSection('portfolio')}>Portfolio</a>
+          <a href='#' className={listStlyeSmallScreen} onClick={() => scrollToSection('team')}>Team</a>
+          <a href='#' className={listStlyeSmallScreen}>Drop Down</a>
+          <a href='#' className={listStlyeSmallScreen} onClick={() => scrollToSection('contact')}>Contact</a>
+        </div>
         </div>
         )
       }

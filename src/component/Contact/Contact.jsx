@@ -1,5 +1,4 @@
 import React from 'react'
-import { Map } from '@googlemaps/react-wrapper';
 import {CiLocationOn} from 'react-icons/ci';
 import {TfiEmail} from 'react-icons/tfi'
 import {BsPhone} from 'react-icons/bs'
@@ -34,14 +33,17 @@ const Contact = () => {
       </div>
       <h1 className="text-3xl sm:text-4xl font-bold tracking-2 mt-2">CONTACT US</h1>
 
-      {/*<div>
-          <Map 
-           apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
-           zoom={14}
-           center={{lat: 40.7128, lng: -74.0059}}
-          />
-  </div>*/}
+    <div className='my-12'>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118046!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1697155060096!5m2!1sen!2sus" 
+       height="300"
+       allowFullScreen="" 
+       className='w-[100%] overflow-hidden'
+       loading="lazy" 
+       referrerPolicy="no-referrer-when-downgrade"
+       title="google map"
+       ></iframe>
 
+    </div>
   <div className='grid grid-cols-12 gap-6 mt-8'>
      <div className='col-span-12 lg:col-span-4'>
        {address.map((add, index) => (
