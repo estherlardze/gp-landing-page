@@ -10,7 +10,7 @@ const Counts = () => {
 
   return (
 
-    <section className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 mt-16'>
+    <section className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 my-16'>
       <div >
         <img src={counts} alt="count image"/>
       </div>

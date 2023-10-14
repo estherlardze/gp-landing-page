@@ -27,7 +27,7 @@ const Navbar = () => {
  window.addEventListener('scroll', changeColor);
 
   return (
-   <nav className={`w-full h-[70px] py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`} id="top">
+   <nav className={`w-full h-[70px] py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : 'bg-black/20'}`} id="top">
     <div className='flex justify-between items-center'>
       <div>
          <h1 className='font-bold text-4xl'>GP <span className='text-yellow'>.</span></h1>

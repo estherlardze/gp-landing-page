@@ -19,15 +19,18 @@ const Home = () => {
      {/*} <Client />*/}
       <Features />
       <Services />
-
       <div className='bg-calltoaction bg-no-repeat bg-center bg-cover bg-fixed h-fit w-full lg:h-[50vh]'>
         <div className='bg-black/60 w-full h-fit lg:h-[50vh]'>
          <CTA />
         </div>
       </div>
-      <Portfolio />
+      <Portfolio />   
       <Counts />
-      {/*<Testimonial />*/}
+      {/* <div className='bg-testimonial bg-no-repeat bg-center bg-cover bg-fixed text-white h-fit w-full lg:h-[80vh]'>
+        <div className='bg-black/60 w-full h-fit lg:h-[80vh]'>
+       } <Testimonial />
+        </div>
+      </div>  */}
       <Team />
       <Contact />
       <Footer />
