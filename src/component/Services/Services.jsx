@@ -6,7 +6,7 @@ import {IoBasketballOutline} from 'react-icons/io5'
 
 const Services = () => {
   return (
-    <section className="mx-4 sm:mx-8 xl:mx-24 mb-12 2xl:bg-red-500 2xl:w-[70%] 2xl:mx-[15%]" id='services'>
+    <section className="mx-4 sm:mx-8 xl:mx-24 mb-12 2xl:w-[70%] 2xl:mx-[15%]" id='services'>
       <div>
         <div className="flex items-end justify-start gap-3">
           <h3 className="text-black/50 font-semibold">SERVICES</h3>

@@ -6,7 +6,7 @@ import {BiCubeAlt} from 'react-icons/bi'
 
 const Features = () => {
   return (
-    <div className='mx-4 sm:mx-8 xl:mx-24 my-16 gap-8 flex flex-col lg:flex-row mt-20 2xl:bg-red-500 2xl:w-[70%] 2xl:mx-[15%]'>
+    <div className='mx-4 sm:mx-8 xl:mx-24 my-16 gap-8 flex flex-col lg:flex-row mt-20 2xl:w-[70%] 2xl:mx-[15%]'>
       <div className='flex-1' data-aos="fade-right">
         <img src={features} alt="features image" className='lg:h-full'/>
       </div>

@@ -30,7 +30,7 @@ export default function Portfolio() {
 
  //console.log(data)
   return (
-    <section id='portfolio' className='mx-4 sm:mx-8 xl:mx-24 my-16 2xl:bg-red-500 2xl:w-[70%] 2xl:mx-[15%]'>
+    <section id='portfolio' className='mx-4 sm:mx-8 xl:mx-24 my-16  2xl:w-[70%] 2xl:mx-[15%]'>
      <div data-aos="fade-up" data-aos-duration="1500">
         <div className="flex items-end justify-start gap-3">
           <h3 className="text-black/50 font-semibold">PORTFOLIO</h3>
