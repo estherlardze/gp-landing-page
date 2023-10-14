@@ -1,36 +1,64 @@
 import React from 'react'
 import { client1, client2, client3, client4, client5, client6, client7, client8 } from '../../assets/index'
+import {Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+const images = [
+    client1, client2, client3, client4, client5, client6, client7, client8
+]
 
 const Client = () => {
   return (
-    <div className='flex gap-28'>
-     <div className='w-[300px]'>
-       <img src={client1} alt="client 1" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client2} alt="client 2" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client3} alt="client 3" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client4} alt="client 4" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client5} alt="client 5" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client6} alt="client 6" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client7} alt="client 7" />
-     </div>
-     <div className='w-[200px]'>
-       <img src={client8} alt="client 8" />
-     </div>
-    
-    </div>
-  )
-}
+    <section className=' w-[95%] mx-auto overflow-hidden 2xl:w-[70%] my-[30px] 2xl:mx-[20%]' data-aos="zoom-in"
+    data-aos-duration="3000">
+    <Swiper
+      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={6}
+      loop
+      autoplay = {{ 
+        delay: 4000,
+        disableOnInteraction: false
+      }}
+      pagination={{ 
+        clickable: true,
+        type: "bullets"
+      }}
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 40
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 60
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 80
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 120
+        }
+      }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <div className='flex justify-center'>
+         {images.map((item, index) => (
+          <SwiperSlide key={index}>
+             <img src={item} alt={index}  
+             className='mb-12 grayscale hover:grayscale-0 w-[90px]'/>
+          </SwiperSlide>
+         ))}
+      </div>
+    </Swiper>
+    </section>
+  );
+};
 
 export default Client

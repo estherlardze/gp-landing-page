@@ -8,7 +8,7 @@ const Form = () => {
 
  
   return (
-    <form className='w-full '>
+    <form className='w-full ' data-aos="fade-left">
      <div className='grid grid-cols-10 gap-6 w-full'>
        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Your Name'
         className='border border-black/30 outline-none p-2 focus:border-yellow rounded-sm col-span-10 sm:col-span-5'/>

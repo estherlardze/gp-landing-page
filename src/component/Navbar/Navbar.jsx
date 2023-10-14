@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 import Dropdown from './Dropdown';
 
@@ -10,6 +10,16 @@ const listStlyeSmallScreen = 'font-semibold py-2 pl-6 hover:bg-yellow transition
 const Navbar = () => {
  const [bgColor, setBgColor] = useState(false);
  const [showMenu, setShowMenu] = useState(false);
+ const [navBg, setNavBg] = useState('transparent');
+
+ useEffect(() => {
+  const currentPage = window.location.pathname;
+  if (currentPage === '/card') {
+    setNavBg('black/80');
+  } else {
+    setNavBg('transparent');
+  }
+}, []);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -27,7 +37,7 @@ const Navbar = () => {
  window.addEventListener('scroll', changeColor);
 
   return (
-   <nav className={`w-full h-[70px] py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : 'bg-black/20'}`} id="top">
+   <nav className={`bg-${navBg} w-full h-[70px] py-4 px-4 md:px-12 lg:px-24 fixed top-0 left-0 z-10 ${bgColor ? 'bg-black/80' : ''}`} id="top">
     <div className='flex justify-between items-center'>
       <div>
          <h1 className='font-bold text-4xl'>GP <span className='text-yellow'>.</span></h1>

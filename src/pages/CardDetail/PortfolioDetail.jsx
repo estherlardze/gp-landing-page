@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { p1 } from '../../assets/index'
+import { p2, p4, p8 } from '../../assets/index'
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Cards = [
       {
@@ -20,6 +26,9 @@ const Cards = [
         service: "www.example.com"
       },
 ]
+const images = [
+    p2, p4, p8
+]
 
 const PortfolioDetail = () => {
   return (
@@ -34,8 +43,34 @@ const PortfolioDetail = () => {
       </div>
 
       <div className='grid grid-cols-10 gap-8 text-black mt-12 mx-4 sm:mx-8 xl:mx-24 justify-center lg:justify-start'>
-        <div className='col-span-10 lg:col-span-7'>
-          <img src={p1} alt="card detail" />
+        
+       <div className='col-span-10 lg:col-span-7'>
+        <Swiper 
+          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          loop
+          autoplay = {{ 
+          delay: 4000,
+          disableOnInteraction: false
+          }}
+          pagination={{ 
+            clickable: true,
+            type: "bullets"
+          }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}     
+          >
+       <div className='flex justify-center items-center'>
+        {images.map((image, index) => (
+           <SwiperSlide key={index}>
+             <div key={index} className="flex flex-col justify-center items-center">         
+                <img src={image} alt="client" className='mb-12' />             
+              </div>
+            </SwiperSlide>
+            ))}
+         </div>
+        </Swiper>
         </div>
 
         <div className='col-span-10 lg:col-span-3'>

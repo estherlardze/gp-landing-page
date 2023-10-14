@@ -6,7 +6,8 @@ import {BsInstagram, BsLinkedin} from 'react-icons/bs'
 
 const TeamCard = ({image, name, position}) => {
   return (
-   <div className="flex flex-col bg-white shadow-sm rounded-xl w-full sm:w-[265px] dark:shadow-slate-300 relative group ">
+   <div  data-aos="fade-up" data-aos-duration="2000"
+     className="flex flex-col bg-white shadow-sm rounded-xl w-full sm:w-[265px] dark:shadow-slate-300 relative group ">
      <div>
        <img className="w-full sm:w-[280px] h-auto rounded-t-xl" src={image} alt="Team mate"/>
        <div className='flex gap-2 absolute bottom-[140px] left-[20%] opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-500 transform translate-y-0 group-hover:translate-y-1/2'>

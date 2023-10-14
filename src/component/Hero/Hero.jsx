@@ -9,13 +9,13 @@ import {RiPaintBrushLine, RiCalendarTodoLine, RiBarChartBoxLine,
 const Hero = () => {
   return (
     <section className='pt-[150px] flex flex-col justify-center items-center' id='home'>
-      <div className='lg:max-w-[50%] text-center'>
+      <div className='lg:max-w-[50%] text-center' data-aos="fade-up">
         <h1 className='text-4xl md:text-6xl font-bold font-sans leading-14 lg:mb-4'>Powerful Digital Solutions With
          <span className='text-yellow'>.</span>
         </h1>
         <h3 className='mt-2 text-2xl'>We are team of talented digital marketers</h3>
       </div>
-      <div className='mt-14 flex gap-6 flex-wrap mx-4 items-center justify-center'>
+      <div className='mt-14 flex gap-6 flex-wrap mx-4 items-center justify-center' data-aos="zoom-in">
         <HeroCard icon={<RiStoreLine size={40}/>} title="Lorem Ipsum"/>
         <HeroCard icon={<RiBarChartBoxLine size={40}/>} title="Dolor Sitema"/>
         <HeroCard icon={<RiCalendarTodoLine size={40}/>} title="Sedare Perspiciatis"/>

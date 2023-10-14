@@ -10,12 +10,12 @@ const Counts = () => {
 
   return (
 
-    <section className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 my-16'>
-      <div >
+    <section className='flex gap-10 flex-col lg:flex-row mx-4 sm:mx-8 xl:mx-24 my-16 2xl:bg-red-500 2xl:w-[70%] 2xl:mx-[15%]'>
+      <div  data-aos="fade-right" data-aos-duration="2000">
         <img src={counts} alt="count image"/>
       </div>
 
-      <div >
+      <div  data-aos="fade-left">
         <h1 className='font-bold text-2xl md:text-3xl lg:text-[38px]'>Voluptatem dignissimos provident quasi</h1>
         <p className='text-black/60 my-4 text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
            incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
