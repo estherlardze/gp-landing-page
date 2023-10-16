@@ -7,7 +7,7 @@ import Toparrow from './Toparrow'
 const Home = () => {
 
   return (
-    <div className='flex flex-col 3xl:justify-center 3xl:items-center 3xl:mx-auto w-[100vw] overflow-hidden'>
+    <div className='flex flex-col 3xl:justify-center  2xl:w-[70%] 2xl:mx-[15%] w-[100vw] overflow-hidden'>
       
       <div className='bg-hero bg-no-repeat bg-center bg-cover bg-fixed text-white h-fit w-[100vw] lg:h-[100vh]'>
         <div className='bg-black/60 w-[100vw] h-fit lg:h-[100vh] pb-12'>

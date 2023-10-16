@@ -33,7 +33,7 @@ const images = [
 const PortfolioDetail = () => {
   return (
     <section>
-      <div className='bg-gray-100 flex justify-between flex-col md:flex-row px-4 sm:px-8 xl:px-24 mt-[70px] py-4 text-black'>
+      <div className='bg-gray-100 flex justify-between flex-col md:flex-row px-4 sm:px-8 xl:px-24 mt-[70px] py-4 text-black 2xl:w-[70%] 2xl:mx-[15%] w-[100vw] '>
         <h1 className='text-3xl text-gray-600'>Portfolio Details</h1>
         <div className='flex text-lg gap-2'>
           <Link to='/' className='text-yellow hover:text-yellow/80'>Home</Link>

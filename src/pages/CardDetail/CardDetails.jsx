@@ -4,7 +4,7 @@ import PortfolioDetail from './PortfolioDetail'
 
 const CardDetails = () => {
   return (
-    <div className='text-white'>
+    <div className='text-white w-[100vw] overflow-hidden'>
       <Navbar/>
       <PortfolioDetail/> 
       <Footer/>
