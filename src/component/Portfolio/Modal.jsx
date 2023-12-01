@@ -1,29 +1,41 @@
+import { AiOutlineClose } from 'react-icons/ai';
 
-const Modal = ({ children, show, onClose, title }) => {
+const Modal = ({ showImage, setShowImage, selectedImageData }) => {
+
+  const handleImage = () => {
+    setShowImage(false);
+  };
+
+  const preventRightClick = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    show && (
-      <>
-        <div className="fixed top-0 left-0 w-[100vw] h-[100vh] bg-black/20" onClick={onClose} />
-        <div className={`bg-black/60 z-50 p-2 my-2 mx-auto shadow-lg fixed left-[50%] top-[50%]  transform -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100vh] ${show ? "active" : ""}`}>
-          <div className="modal-content">
-            <div className="flex items-center justify-between mb-3">
-              <div className="modal-title">{title}</div>
-              <div onClick={onClose} className="text-center text-xl cursor-pointer w-[30px] h-[30px] rounded-full bg-gray-400">
-                X
-              </div>
-            </div>
-            <div className="modal-body">{children}</div>
+    <>
+      {showImage && selectedImageData && (
+        <section className='bg-black/95 w-full h-screen fixed left-0 top-0 z-50 flex flex-col justify-center items-center mb-10'>
+          <div
+            className='flex flex-col-reverse sm:flex-row justify-start sm:justify-center items-center sm:items-start w-[92%] mx-[4%] sm:w-full sm:mx-10 gap-10'
+            onContextMenu={preventRightClick} 
+          >
+            <img
+              src={selectedImageData.image}
+              alt={`project work ${selectedImageData.id}`}
+              className='w-full sm:w-[80%] h-[300px] sm:h-[70] md:h-[80vh]'
+              onContextMenu={preventRightClick}
+            />
+
+            <AiOutlineClose
+              size={25}
+              className='cursor-pointer text-white font-bold'
+              onClick={handleImage}
+            />
           </div>
-        </div>
-      </>
-    )
+
+        </section>
+      )}
+    </>
   );
 };
 
 export default Modal;
-
-
-  
-
-  
-  

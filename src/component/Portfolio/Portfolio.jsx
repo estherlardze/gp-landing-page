@@ -10,13 +10,13 @@ export default function Portfolio() {
   const [data, setData] = useState([]);
   const [collection, setCollection] = useState([]);
   const [active, setActive] = useState(0);
-  const [show, setShow] = useState(false)
+  const [showImage, setShowImage] = useState(false);
+  const [selectedImageData, setSelectedImageData] = useState(null);
 
 
   useEffect(() => {
     setData(images)
     setCollection([... new Set(images.map((item) => item.tagName))])
-    //console.log(collection)
   }, [])
 
   const galleryFilter = (itemData)=> {
@@ -24,9 +24,6 @@ export default function Portfolio() {
     setData(filteredData)
   }
 
-  const onModalClose = () => {
-    setShow(false)
-  }
 
  //console.log(data)
   return (
@@ -57,14 +54,20 @@ export default function Portfolio() {
           data.map((item, index) =>(
             <div key={index} 
               className='col-span-6 md:w-[375px] md:col-span-3 lg:col-span-2'>
-               <PortfolioCard item={item} index={index} active={active} setActive={setActive} setShow={setShow}/>
+               <PortfolioCard 
+                 item={item} 
+                 index={index} 
+                 active={active} 
+                 setActive={setActive} 
+                 setShowImage={setShowImage}
+                 setSelectedImageData = {setSelectedImageData}
+                 />
             </div>
           ))
          }
      </div>
-     {/*} <Modal title="light box" show={show} onClose={onModalClose}>
-        <ImageSlider data={data} active={active}/>
-        </Modal>*/}
+     <Modal showImage={showImage} setShowImage={setShowImage} selectedImageData={selectedImageData} data={images}/>
+       
     </section>
   )
 }

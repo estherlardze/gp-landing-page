@@ -3,12 +3,13 @@ import {BsPlus} from 'react-icons/bs'
 import {BiLink} from 'react-icons/bi'
 import {Link} from 'react-router-dom'
 
-const PortfolioCard = ({item, index, active, setActive, setShow}) => {
+const PortfolioCard = ({item, setSelectedImageData, setShowImage}) => {
 
-  const handleActiveClick = (i) => {
-    setActive(i)
-    setShow()
+  const handleActiveClick = (item) => {
+    setShowImage(true);
+    setSelectedImageData(item);
   }
+
 
   return (
     <div className='relative group text-white' data-aos="fade-up" data-aos-duration="2000">
@@ -19,8 +20,7 @@ const PortfolioCard = ({item, index, active, setActive, setShow}) => {
             <p className='font-semibold text-2xl'>{item.title}</p>
             <p className='uppercase text-gray-200'>{item.tagName}</p>
             <div className='flex gap-3'>
-              <div onClick={()=> handleActiveClick(index)} 
-               className={index === active ? "bg-green-500": ''}>
+              <div onClick={()=> handleActiveClick(item)}>
               <BsPlus size={30} className='hover:text-yellow cursor-pointer'/>
               </div>
               <Link to="/card">
